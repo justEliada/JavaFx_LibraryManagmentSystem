@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import java.net.URL?>
+<VBox alignment="CENTER" prefHeight="483.0" prefWidth="614.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="com.example.mangmentsystem.controller.LoginController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label fx:id="welcomeText" />
+   <BorderPane prefHeight="413.0" prefWidth="574.0">
+      <left>
+         <AnchorPane prefHeight="406.0" prefWidth="275.0" style="-fx-background-color: #0d72a8;" BorderPane.alignment="CENTER">
+            <children>
+               <Label alignment="CENTER" layoutX="1.0" layoutY="87.0" prefHeight="23.0" prefWidth="298.0" text="Metropolitan Library " textAlignment="CENTER" textFill="WHITE">
+                  <font>
+                     <Font name="Verdana Bold" size="18.0" />
+                  </font>
+               </Label>
+               <Label alignment="CENTER" layoutX="2.0" layoutY="118.0" prefHeight="23.0" prefWidth="298.0" text="MANAGMENT SYSTEM" textAlignment="CENTER" textFill="WHITE">
+                  <font>
+                     <Font name="Verdana Bold" size="18.0" />
+                  </font>
+               </Label>
+               <Line endX="100.0" layoutX="150.0" layoutY="152.0" startX="-100.0" stroke="WHITE">
+                  <effect>
+                     <DropShadow />
+                  </effect>
+               </Line>
+               <Text fill="WHITE" layoutX="58.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A">
+                  <font>
+                     <Font name="Times New Roman" size="64.0" />
+                  </font>
+               </Text>
+               <Text fill="WHITE" layoutX="114.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="B">
+                  <font>
+                     <Font name="Times New Roman" size="64.0" />
+                  </font>
+               </Text>
+               <Text fill="WHITE" layoutX="167.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C">
+                  <font>
+                     <Font name="Times New Roman" size="64.0" />
+                  </font>
+               </Text>
+               <Text fill="WHITE" layoutX="210.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text=".">
+                  <font>
+                     <Font name="Times New Roman" size="64.0" />
+                  </font>
+               </Text>
+            </children>
+         </AnchorPane>
+      </left>
+      <right>
+         <BorderPane prefHeight="406.0" prefWidth="289.0" style="-fx-background-color: #97dbe4;" BorderPane.alignment="CENTER">
+            <left>
+               <AnchorPane BorderPane.alignment="CENTER">
+                  <children>
+                     <Label alignment="CENTER" layoutY="74.0" prefHeight="23.0" prefWidth="128.0" text="Username" textAlignment="CENTER">
+                        <font>
+                           <Font name="Verdana" size="18.0" />
+                        </font>
+                     </Label>
+                     <Label alignment="CENTER" layoutX="6.0" layoutY="114.0" prefHeight="23.0" prefWidth="107.0" text="Password">
+                        <font>
+                           <Font name="Verdana" size="18.0" />
+                        </font>
+                     </Label>
+                  </children>
+               </AnchorPane>
+            </left>
+            <center>
+               <BorderPane BorderPane.alignment="CENTER">
+                  <center>
+                     <AnchorPane prefHeight="383.0" prefWidth="178.0" BorderPane.alignment="CENTER">
+                        <children>
+                           <TextField fx:id="usernameTextField" layoutX="1.0" layoutY="73.0" prefHeight="26.0" prefWidth="146.0" promptText="e.g Grupi" />
+                           <PasswordField fx:id="passwordField" layoutX="1.0" layoutY="112.0" prefHeight="26.0" prefWidth="146.0" promptText="Grupi123" />
+                           <Label alignment="CENTER" layoutX="-137.0" layoutY="5.0" prefHeight="24.0" prefWidth="301.0" text="Login" textAlignment="CENTER">
+                              <font>
+                                 <Font name="Verdana Bold" size="18.0" />
+                              </font>
+                           </Label>
+                           <Button fx:id="loginButton" layoutY="203.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="26.0" prefWidth="140.0" style="-fx-background-color: #c8e9f0;" text="Login" textFill="#070707" />
+                           <Button fx:id="signUpButton" layoutY="247.0" mnemonicParsing="false" onAction="#signUpButtonOnAction" prefHeight="26.0" prefWidth="140.0" style="-fx-background-color: #08619b;" text="Sign Up" textFill="WHITE" />
+                           <Button fx:id="exitButton" layoutX="70.0" layoutY="366.0" mnemonicParsing="false" onAction="#exitButtonOnAction" prefHeight="26.0" prefWidth="86.0" style="-fx-background-color: #0d72a8;" text="Exit" textFill="WHITE" />
+                           <Label fx:id="retryLabel" layoutX="1.0" layoutY="42.0" prefHeight="17.0" prefWidth="144.0" textFill="RED" />
+                        </children>
+                     </AnchorPane>
+                  </center>
+               </BorderPane>
+            </center>
+         </BorderPane>
+      </right>
+   </BorderPane>
+</VBox>

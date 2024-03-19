@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<?import javafx.scene.layout.HBox?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mangmentsystem.controller.HomePageController" style="-fx-background-color: #add8e6;">
+    <children>
+        <MenuBar layoutY="10.0" prefHeight="30.0" prefWidth="600.0">
+            <menus>
+                <Menu text="Books">
+                    <items>
+                        <MenuItem fx:id="allBooks" text="All" onAction="#handleAllBooks"/>
+                        <MenuItem fx:id="fictionBooks" text="Fiction" onAction="#handleGenreSelection"/>
+                        <MenuItem fx:id="sciFiBooks" text="Sci-Fi" onAction="#handleGenreSelection"/>
+                        <MenuItem fx:id="classicalBooks" text="Classical" onAction="#handleGenreSelection"/>
+                    </items>
+                </Menu>
+                <Menu text="Publishing Companies">
+                    <items>
+                        <MenuItem fx:id="allPublishingCompanies" text="All Publishing Companies" onAction="#handleAllPublishingCompanies"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <HBox layoutX="10.0" layoutY="50.0" spacing="10">
+            <!-- Navigate buttons -->
+            <Button fx:id="navigateButton" text="Add Books" onAction="#handleNavigateButtonAction" style="-fx-background-color: #6495ed; -fx-text-fill: white;"/>
+            <Button fx:id="navigateButton2" text="Remove Books" onAction="#handleNavigateButtonAction2" style="-fx-background-color: #6495ed; -fx-text-fill: white;"/>
+            <!-- Search field -->
+            <TextField fx:id="searchField" promptText="Search for a book..." onKeyReleased="#handleSearch"/>
+            <Button fx:id="quitButton" onAction="#handleQuit" text="Quit Application" style="-fx-background-color: #6b7db3;"/>
+            <Button fx:id="borrowBook" onAction="#handleBorrowBook" text="Borrow Book" style="-fx-background-color: #6b7db3;"/>
+        </HBox>
+        <TableView fx:id="bookTableView" layoutY="80.0" prefHeight="320.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="titleCol" prefWidth="200.0" text="Title"/>
+                <TableColumn fx:id="authorCol" prefWidth="200.0" text="Author"/>
+                <TableColumn fx:id="genreCol" prefWidth="200.0" text="Genre"/>
+            </columns>
+        </TableView>
+        <TableView fx:id="publishingCompanyTableView" layoutY="80.0" prefHeight="320.0" prefWidth="600.0" visible="false">
+            <columns>
+                <TableColumn fx:id="companyNameCol" prefWidth="200.0" text="Company Name"/>
+                <TableColumn fx:id="addressCol" prefWidth="200.0" text="Address"/>
+                <TableColumn fx:id="streetCol" prefWidth="200.0" text="Street"/>
+            </columns>
+        </TableView>
+    </children>
+
+</AnchorPane>
